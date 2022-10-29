@@ -1,0 +1,18 @@
+1. brute force search / naive
+- O(N*M) (N:본문 길이, M:패턴 길이)
+
+2. rabin karp
+- 해쉬값으로 비교
+- 해쉬 충돌이 있으니 해쉬값 비교 후 일치하면 문자열 패턴 1:1 매칭하여 확인
+- O(N+M) (N:본문 길이, M:패턴 길이)
+https://www.youtube.com/watch?v=kJJQJDsjXc8
+
+3. KMP (Kunth-Morris-Pratt)
+- 불일치가 발생하기 직전까지 같았던 부분은 다시 비교하지 않고 건너뛰 후 패턴 매칭 진행
+- 몇 칸을 건너뛰고 검색을 진행하는지는 failure funtion 사용
+https://www.youtube.com/watch?v=yWWbLrV4PZ8
+
+4. boyer-moore
+- 패턴 문자 오른쪽(뒤)에서부터 비교 검사
+- 나쁜 문자 이동과 착한 접미부 이동 2가지가 존재
+- O(N) 보다 낮으나, 최악의 경우 O(MN) (N:본문 길이, M:패턴 길이)
